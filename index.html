@@ -24,7 +24,7 @@
 			<br>
 
 			<div class="paratext">
-				<p>You will be given a random number at the start of the game</p>
+				<p>You will be given a random number at the start of the game.</p>
 
 				<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
 
@@ -67,7 +67,7 @@
 			</div>
 			
 			<div class="lastscore">
-			<h2 id="finalscore"></h2>
+			<h1 id="finalscore"></h1>
 			</div>
 
 		</div>
@@ -109,19 +109,20 @@
 
 	}
 
-	function updateDisplay(){
-		$("#finalscore").html(score);
-	
-	// 	function updateDisplay(){
-		$("#num").html(randomNumber1);
+	function addValue(button3){
+		score = score + button3;
+
 	}
 
-	console.log(button1);
-	console.log(button2);
-	console.log(button3);
-	console.log(button4);
+	function addValue(button4){
+		score = score + button4;
 
-	console.log("Score: " + score);
+	}
+
+	function updateDisplay(){
+		$("#finalscore").html(score);
+		$("#num").html(randomNumber1);
+	}
 
 
  	$("#image1").click(function(){
@@ -129,18 +130,56 @@
  		console.log(score);
  		updateDisplay();
 
- 		// need to find a way for the score value to update after the new button
- 		//  number has been added.
- 		// score + button1;
- 		// found a way for it to print to the screen, however, it only prints text.
- 		// $("#num").html("test");
- 	})
+ 		if ((score == randomNumber1)){
+ 		win++;
+ 		console.log("You Won!");
+ 		$("#Win").html("Wins: " + win);
+        alert("You won that round, Play Again?");
+        score = 0;
+        randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+        updateDisplay();
+
+		}
+
+ 		if((score >= randomNumber1)){
+ 		lose++;
+ 		console.log("You Lost!");
+ 		$("#Loss").html("Losses: " + lose);
+ 		alert("You lost that round, Play Again?");
+ 		score = 0;
+ 		randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+ 		updateDisplay();
+ 		}
+
+	})
 
 
  	$("#image2").click(function(){
  		addValue(button2);
  		console.log(score);
  		updateDisplay();
+
+ 		if ((score == randomNumber1)){
+ 		win++;
+ 		console.log("You Won!");
+ 		$("#Win").html("Wins: " + win);
+         alert("You won that round, Play Again?");
+         score = 0;
+         randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+         updateDisplay();
+
+		}
+
+ 		if((score >= randomNumber1)){
+ 		lose++;
+ 		console.log("You Lost!");
+ 		$("#Loss").html("Losses: " + lose);
+ 	 	alert("You lost that round, Play Again?");
+ 		score = 0;
+ 		randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+ 		updateDisplay();
+ 		}
+
  	})
 
 
@@ -148,6 +187,27 @@
  		addValue(button3);
  		console.log(score);
  		updateDisplay();
+
+ 		if ((score == randomNumber1)){
+ 		win++;
+ 		console.log("You Won!");
+ 		$("#Win").html("Wins: " + win);
+         alert("You won that round, Play Again?");
+         score = 0;
+         randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+         updateDisplay();
+		}
+
+ 		if((score >= randomNumber1)){
+ 		lose++;
+ 		console.log("You Lost!");
+ 		$("#Loss").html("Losses: " + lose);
+ 		alert("You lost that round, Play Again?");
+ 		score = 0;
+ 		randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+ 		updateDisplay();
+ 		}
+
  	})
 
 
@@ -155,24 +215,31 @@
  		addValue(button4);
  		console.log(score);
  		updateDisplay();
+		
+		if ((score == randomNumber1)){
+ 		win++;
+ 		console.log("You Won!");
+ 		$("#Win").html("Wins: " + win);
+         alert("You won that round, Play Again?");
+         score = 0;
+         randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+         updateDisplay();
+
+		}
+
+		if((score >= randomNumber1)){
+ 		lose++;
+ 		console.log("You Lost!");
+ 		$("#Loss").html("Losses: " + lose);
+ 		alert("You lost that round, Play Again?");
+ 		score = 0;
+ 		randomNumber1 = randomNumberFromRange(minNumber, maxNumber);
+ 		updateDisplay();
+ 		}
+
  	})
 
 
-// if ((userGuess === "a") || (userGuess === "b") || (userGuess === "c") || (userGuess === "d") || (userGuess === "e") || (userGuess === "f") || (userGuess === "g") || (userGuess === "h") || (userGuess === "i") || (userGuess === "j") || (userGuess === "k") || (userGuess === "l") || (userGuess === "m") || (userGuess === "n") || (userGuess === "o") || (userGuess === "q") || (userGuess === "r") || (userGuess === "s") || (userGuess === "t") ||
-
-//  	// if((randomNumber1 === score)){
-//  	// 	win++;
-//  	// 	console.log("You Won!");
-//  	// 	$("#Win").html("Wins: " + win);
-//   //        alert("You won that round, Play Again?");
-//  	// 	reset(score)
-//  	}
-
- 	// else if((score >= randomNumber1)){
- 	// 	lose++;
- 	// 	console.log("You Lost!");
- 	// 	$("#Loss").html("Losses: " + lose);
- 	// }
 
  });
 
