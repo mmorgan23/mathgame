@@ -1,0 +1,125 @@
+
+body {
+	background-image: url("../images/backgroundimage.jpg");
+}
+
+#container {
+	width: 900px;
+}
+
+h1 {
+	padding-top: 5px;
+	padding-left: -10px;
+}
+
+.heading1 {
+	background-color: white;
+	opacity: 0.8;
+	width: 400px;
+	height: 50px;
+	color: #6B238E;
+	margin-left: 15px;
+
+}
+
+.paratext {
+	background-color: white;
+	padding: 10px;
+	opacity: 0.8;
+	width: 700px;
+	padding-left: 35px;
+	color: #6B238E;
+	margin-left: 15px;
+
+}
+
+#numberbox {
+	background-color: white;
+	padding: 10px;
+	opacity: 0.8;
+	width: 90px;
+	height: 100px;
+	padding-left: 35px;
+	color: #6B238E;
+	margin-left: 15px;
+
+}
+
+.winlose {
+	float:right;
+	background-color: #8A2BE2;
+	padding: 10px;
+	opacity: 0.8;
+	width: 90px;
+	height: 100px;
+	margin-right: 620px;
+	margin-top: -120px;
+/*	padding-left: 35px;
+*/	color: white;
+/*	margin-left: 15px;
+
+*/ 
+}
+
+.crystalimages {
+	margin-left: 15px;
+
+}
+
+button{
+    display: inline-block;
+    height: 114px;
+    padding: 0;
+    margin: 5px;
+    vertical-align: top;
+    width: 104px;
+}
+
+#image1 img {
+    display: block;
+    height: 110px;  
+    width: 100px;
+}
+
+#image2 img {
+    display: block;
+    height: 110px;  
+    width: 100px;
+}
+
+#image3 img {
+    display: block;
+    height: 110px;  
+    width: 100px;
+}
+
+#image4 img {
+    display: block;
+    height: 110px;  
+    width: 100px;
+}
+
+.scoretext {
+	background-color: #8A2BE2;
+	opacity: 0.8;
+	width: 135px;
+	height: 40px;
+	color: white;
+	margin-left: 15px;
+
+}
+
+.lastscore {
+	background-color: white;
+	padding: 10px;
+	opacity: 0.8;
+	width: 90px;
+	height: 100px;
+	padding-left: 35px;
+	color: #6B238E;
+	margin-left: 15px;
+}
+
+.scoretext1 {
+	padding: 10px;
+}
